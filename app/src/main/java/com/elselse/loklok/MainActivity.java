@@ -160,8 +160,8 @@ public class MainActivity extends Activity {
                         @Override
                         public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                             Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
-                            intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent1);
+                            finish();
                         }
                     });
 
@@ -319,6 +319,7 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+                finish();
             }
         }
     }

@@ -258,6 +258,7 @@ public class PairActivity extends Activity {
         if(myID == 0) {
             myID = (int) Math.round(Math.random() * 10000);
             if (myID < 1000) {
+                myID = 0;
                 generateRandomID();
             }
         }

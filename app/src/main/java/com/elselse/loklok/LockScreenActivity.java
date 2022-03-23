@@ -119,7 +119,7 @@ public class LockScreenActivity extends Activity {
             case MotionEvent.ACTION_MOVE:
                 if(event.getY() - initY < 0)
                     cLayout.setY(event.getY() - initY);
-                if(cLayout.getY() < -600) {
+                if(cLayout.getY() < -200) {
                     try {
                         lockImg.setImageDrawable(getResources().getDrawable(R.drawable.unlock));
                     }catch (Exception ignored){}
@@ -132,7 +132,7 @@ public class LockScreenActivity extends Activity {
                 break;
             case MotionEvent.ACTION_UP:
                 startTime = System.currentTimeMillis();
-                if(cLayout.getY() < -600) {
+                if(cLayout.getY() < -200) {
                     ObjectAnimator animation = ObjectAnimator.ofFloat(cLayout, "translationY", -2300);
                     animation.setDuration(300);
                     animation.start();
